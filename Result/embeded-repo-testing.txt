@@ -1,0 +1,114 @@
+
+Endpoint :	http://localhost:8222/employees/
+
+Http Method: GET
+
+Response:
+
+		[
+    {
+        "id": "6281330dbd76f9018b8fb481",
+        "firstName": "fname1",
+        "lastName": "lastname1",
+        "address": {
+            "addLine1": "addLine1",
+            "addLine2": "addLine2",
+            "city": "city1",
+            "state": "state1",
+            "zip": 1
+        },
+        "salary": 12341.0
+    },
+    {
+        "id": "6281330dbd76f9018b8fb482",
+        "firstName": "fname2",
+        "lastName": "lastname2",
+        "address": {
+            "addLine1": "addLine1",
+            "addLine2": "addLine2",
+            "city": "city2",
+            "state": "state2",
+            "zip": 2
+        },
+        "salary": 12342.0
+    },
+    {
+        "id": "6281330dbd76f9018b8fb483",
+        "firstName": "fname3",
+        "lastName": "lastname3",
+        "address": {
+            "addLine1": "addLine1",
+            "addLine2": "addLine2",
+            "city": "city3",
+            "state": "state3",
+            "zip": 3
+        },
+        "salary": 12343.0
+    },
+    {
+        "id": "6281330dbd76f9018b8fb484",
+        "firstName": "fname4",
+        "lastName": "lastname4",
+        "address": {
+            "addLine1": "addLine1",
+            "addLine2": "addLine2",
+            "city": "city4",
+            "state": "state4",
+            "zip": 4
+        },
+        "salary": 12344.0
+    },
+    {
+        "id": "6281330dbd76f9018b8fb485",
+        "firstName": "fname5",
+        "lastName": "lastname5",
+        "address": {
+            "addLine1": "addLine1",
+            "addLine2": "addLine2",
+            "city": "city5",
+            "state": "state5",
+            "zip": 5
+        },
+        "salary": 12345.0
+    }
+]
+------------------------------------------------------------------------------------------
+
+
+Endpoint : http://localhost:8222/employees/employee
+
+HTTP Method: POST
+
+Request Body::
+	
+	{
+        "firstName": "new-fname1",
+        "lastName": "new-lastname1",
+        "address": {
+            "addLine1": "new-addLine1",
+            "addLine2": "new-addLine2",
+            "city": "new-city1",
+            "state": "new-state1",
+            "zip": 101254
+        },
+        "salary": 130000
+    }
+    
+    
+
+Response::
+
+	{
+	 "id": "6281330dbd76f9018b8fb485",
+    "firstName": "new-fname1",
+    "lastName": "new-lastname1",
+    "address": {
+        "addLine1": "new-addLine1",
+        "addLine2": "new-addLine2",
+        "city": "new-city1",
+        "state": "new-state1",
+        "zip": 101254
+    },
+    "salary": 130000.0
+}
+-------------------------------------------------------------------------------------------

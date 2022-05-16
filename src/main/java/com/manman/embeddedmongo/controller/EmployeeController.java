@@ -25,4 +25,10 @@ public class EmployeeController {
         return employeeService.insertEmployee(e);
 
     }
+
+
+    @DeleteMapping("/")
+    public void deleteAll(){
+        employeeService.deleteAll();
+    }
 }

@@ -2,27 +2,26 @@ package com.manman.embeddedmongo.controller;
 
 import com.manman.embeddedmongo.model.Address;
 import com.manman.embeddedmongo.model.Employee;
-import com.manman.embeddedmongo.repository.EmployeeRepository;
+import com.manman.embeddedmongo.service.EmployeeService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mockito.Mock;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
 
 @DataMongoTest(properties = {"spring.mongodb.embedded.version=3.4.5"})
 @ExtendWith(SpringExtension.class)
 class EmployeeControllerTest {
 
-    @Autowired
-    EmployeeRepository repository;
+    @Mock
+    EmployeeService employeeService;
 
-
+    EmployeeController employeeController;
 
     @Test
     public void getAll(){
@@ -35,10 +34,10 @@ class EmployeeControllerTest {
 
         Employee[] employeesArr = { e1,e2,e3,e4,e5};
         employeeList= Arrays.asList(employeesArr);
-
-        repository.insert(employeeList);
-        employeeList = repository.findAll();
+        when(employeeService.findAll()).thenReturn(employeeList);
+        employeeList = employeeController.getAll();
         assertThat(employeeList.size()).isEqualTo(5);
+        employeeService.deleteAll();
     }
 
 }

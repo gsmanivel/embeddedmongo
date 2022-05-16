@@ -22,4 +22,7 @@ public class EmployeeService {
     }
 
 
+    public void deleteAll() {
+        employeeRepository.deleteAll();
+    }
 }

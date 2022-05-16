@@ -24,7 +24,7 @@ public class EmbeddedMongoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		/*List<Employee> employeeList = new ArrayList<>();
+		List<Employee> employeeList = new ArrayList<>();
 
 		Employee e1 = new Employee("fname1","lastname1",new Address("addLine1","addLine2","city1","state1",00001),12341);
 		Employee e2 = new Employee("fname2","lastname2",new Address("addLine1","addLine2","city2","state2",00002),12342);
@@ -35,6 +35,6 @@ public class EmbeddedMongoApplication implements CommandLineRunner {
 		Employee[] employeesArr = { e1,e2,e3,e4,e5};
 		employeeList= Arrays.asList(employeesArr);
 
-		employeeRepository.insert(employeeList);*/
+		employeeRepository.insert(employeeList);
 	}
 }
