@@ -1,4 +1,4 @@
-package com.manman.embeddedmongo.repository;
+ package com.manman.embeddedmongo.repository;
 
 import com.manman.embeddedmongo.model.Address;
 import com.manman.embeddedmongo.model.Employee;
